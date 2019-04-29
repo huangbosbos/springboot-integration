@@ -36,7 +36,8 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.GET,value = "/{id}/select")
     public User select(@PathVariable("id")int id){
-        return userService.selectById(id);
+        User user = userService.selectById(id);
+        return user;
     }
 
     @RequestMapping(method = RequestMethod.GET,value = "/selectAll/{pageNum}/{pageSize}")

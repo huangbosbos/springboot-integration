@@ -1,6 +1,5 @@
 package com.fantj.service.impl;
 
-import com.fantj.daos.UserDao;
 import com.fantj.service.UserService;
 import com.generator.tables.User;
 import org.jooq.DSLContext;
@@ -9,7 +8,6 @@ import org.jooq.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.Iterator;
 
 

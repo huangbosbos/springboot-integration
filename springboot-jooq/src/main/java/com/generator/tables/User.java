@@ -15,7 +15,6 @@ import java.util.List;
 import javax.annotation.Generated;
 
 import org.jooq.Field;
-import org.jooq.Identity;
 import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Schema;
@@ -39,7 +38,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class User extends TableImpl<UserRecord> {
 
-    private static final long serialVersionUID = 1571844404;
+    private static final long serialVersionUID = 2160227;
 
     /**
      * The reference instance of <code>user.user</code>
@@ -57,27 +56,27 @@ public class User extends TableImpl<UserRecord> {
     /**
      * The column <code>user.user.id</code>.
      */
-    public final TableField<UserRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
+    public final TableField<UserRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>user.user.address</code>.
      */
-    public final TableField<UserRecord, String> ADDRESS = createField("address", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+    public final TableField<UserRecord, String> ADDRESS = createField("address", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>user.user.birthday</code>.
      */
-    public final TableField<UserRecord, LocalDateTime> BIRTHDAY = createField("birthday", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false), this, "");
+    public final TableField<UserRecord, LocalDateTime> BIRTHDAY = createField("birthday", org.jooq.impl.SQLDataType.LOCALDATETIME, this, "");
 
     /**
      * The column <code>user.user.sex</code>.
      */
-    public final TableField<UserRecord, String> SEX = createField("sex", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+    public final TableField<UserRecord, String> SEX = createField("sex", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>user.user.username</code>.
      */
-    public final TableField<UserRecord, String> USERNAME = createField("username", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+    public final TableField<UserRecord, String> USERNAME = createField("username", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * Create a <code>user.user</code> table reference
@@ -122,14 +121,6 @@ public class User extends TableImpl<UserRecord> {
     @Override
     public List<Index> getIndexes() {
         return Arrays.<Index>asList(Indexes.USER_PRIMARY);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Identity<UserRecord, Integer> getIdentity() {
-        return Keys.IDENTITY_USER_;
     }
 
     /**
